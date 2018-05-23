@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @PostMapping("showParam")
     public String testInter(){
-        return "Hello Spring Boot123467";
+        return "Hello Spring Boot1234672";
     }
 }
