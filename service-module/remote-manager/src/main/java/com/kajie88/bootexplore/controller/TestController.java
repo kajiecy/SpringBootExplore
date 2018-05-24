@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @RequestMapping("showParam")
     public String testInter(){
-        return "Hello Spring Boot";
+        return "测试自动部署";
     }
 }
