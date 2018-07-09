@@ -27,7 +27,7 @@ public class TestController {
     public String readExcel(){
         File f = new File("D://test.xls");
         try {
-            List<List<String>> list = ReadWriteExcel.readExcel(f);
+            Map<String,List<List<String>>> list = ReadWriteExcel.readExcel(f,0);
             System.out.println(list.toString());
         } catch (Exception e) {
             e.printStackTrace();
