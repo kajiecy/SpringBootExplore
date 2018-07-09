@@ -9,6 +9,7 @@
 	<modules>
 		<module>base-module</module>
 		<module>service-module</module>
+		<module>util-module</module>
 	</modules>
 	<packaging>pom</packaging>
 
