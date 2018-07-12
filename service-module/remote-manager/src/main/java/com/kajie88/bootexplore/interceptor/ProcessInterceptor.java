@@ -18,7 +18,9 @@ public class ProcessInterceptor implements HandlerInterceptor {
 
         httpServletResponse.setHeader("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
 
-        httpServletResponse.setHeader("X-Powered-By","Jetty");
+        httpServletResponse.setHeader("X-Powered-By","KaJie");
+
+        httpServletResponse.setContentType("text/html;charset=UTF-8");
 
         String method= httpServletRequest.getMethod();
 
