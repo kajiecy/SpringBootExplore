@@ -1,7 +1,9 @@
 package com.kajie88.bootexplore.controller;
 
+import com.kajie88.base.dao.TestDao;
 import com.kajie88.base.dto.req.BaseReqDTO;
 import com.kajie88.base.dto.resp.BaseRespDTO;
+import com.kajie88.bootexplore.learntest.LearnTest;
 import com.kajie88.util.excel.ReadWriteExcel;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +27,12 @@ import java.util.Map;
 public class TestController {
     @RequestMapping("showParam")
     public String testInter(){
-        return "测试自动部署4";
+        TestDao testDao = new TestDao();
+
+        LearnTest lt = new LearnTest();
+
+
+        return testDao.sayHello+""+lt.getName()+lt.getPwd();
     }
     @RequestMapping("readExcel")
     public BaseRespDTO<Object> readExcel(@RequestBody BaseReqDTO<Map<String, String>> reqDTO){

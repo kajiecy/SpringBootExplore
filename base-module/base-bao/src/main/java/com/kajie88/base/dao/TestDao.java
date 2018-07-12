@@ -8,4 +8,5 @@ package com.kajie88.base.dao;
  * Time: 10:55
  */
 public class TestDao {
+    public String sayHello = "hello word222";
 }
