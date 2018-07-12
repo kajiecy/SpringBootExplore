@@ -5,6 +5,7 @@ import com.kajie88.base.dto.req.BaseReqDTO;
 import com.kajie88.base.dto.resp.BaseRespDTO;
 import com.kajie88.bootexplore.learntest.LearnTest;
 import com.kajie88.util.excel.ReadWriteExcel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,14 +26,17 @@ import java.util.Map;
 @RestController
 @RequestMapping("test")
 public class TestController {
+
+    @Autowired
+    private LearnTest lt;
+
     @RequestMapping("showParam")
     public String testInter(){
         TestDao testDao = new TestDao();
 
-        LearnTest lt = new LearnTest();
 
 
-        return testDao.sayHello+""+lt.getName()+lt.getPwd();
+        return testDao.sayHello+"name:"+lt.getName()+";pwd:"+lt.getPwd();
     }
     @RequestMapping("readExcel")
     public BaseRespDTO<Object> readExcel(@RequestBody BaseReqDTO<Map<String, String>> reqDTO){
@@ -44,7 +48,7 @@ public class TestController {
             e.printStackTrace();
         }
         BaseRespDTO<Object> respDTO = new BaseRespDTO<>();
-        respDTO.setData("hello word");
+        respDTO.setData("hello word222");
         return respDTO;
     }
 
