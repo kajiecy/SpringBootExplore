@@ -1,7 +1,7 @@
 package com.kajie88.base.dto.resp;
 
 
-import com.kajie88.base.enums.ResponseStatus;
+import com.kajie88.base.enums.common.ResponseStatus;
 
 /**
  * Created by wangnan on 2016/6/21.

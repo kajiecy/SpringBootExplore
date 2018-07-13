@@ -37,7 +37,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.kajie88.bootexplore.BootexploreApplication</mainClass>
+                    <mainClass>com.kajie88.BootexploreApplication</mainClass>
                     <fork>true</fork>
                 </configuration>
 
@@ -87,6 +87,12 @@
         <dependency>
             <groupId>com.kajie88</groupId>
             <artifactId>base-bao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.kajie88</groupId>
+            <artifactId>base-exception</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

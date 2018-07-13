@@ -1,11 +1,11 @@
-package com.kajie88.bootexplore;
+package com.kajie88;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages={"com.kajie88"})
 public class BootexploreApplication extends SpringBootServletInitializer{
 	//for tomcat
 	@Override

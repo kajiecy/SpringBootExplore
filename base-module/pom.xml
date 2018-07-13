@@ -16,6 +16,7 @@
         <module>base-po</module>
         <module>base-enum</module>
         <module>base-dto</module>
+        <module>base-exception</module>
     </modules>
 
 

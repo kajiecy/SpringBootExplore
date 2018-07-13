@@ -1,7 +1,7 @@
 package com.kajie88.base.dto.req;
 
 
-import com.kajie88.base.enums.TerminalType;
+import com.kajie88.base.enums.common.TerminalType;
 
 /**
  * Created by wangnan on 2016/6/21.

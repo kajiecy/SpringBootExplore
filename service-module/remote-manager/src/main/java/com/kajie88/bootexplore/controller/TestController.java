@@ -3,6 +3,8 @@ package com.kajie88.bootexplore.controller;
 import com.kajie88.base.dao.TestDao;
 import com.kajie88.base.dto.req.BaseReqDTO;
 import com.kajie88.base.dto.resp.BaseRespDTO;
+import com.kajie88.base.enums.error.CommonError;
+import com.kajie88.base.exception.CommonException;
 import com.kajie88.bootexplore.learntest.LearnTest;
 import com.kajie88.util.excel.ReadWriteExcel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,13 +35,13 @@ public class TestController {
     @RequestMapping("showParam")
     public String testInter(){
         TestDao testDao = new TestDao();
-
-
-
+//        int number = 1/0;
+//        throw new CommonException(CommonError.SYSTEM_ERROR,"111");
         return testDao.sayHello+"name:"+lt.getName()+";pwd:"+lt.getPwd();
     }
     @RequestMapping("readExcel")
     public BaseRespDTO<Object> readExcel(@RequestBody BaseReqDTO<Map<String, String>> reqDTO){
+//        int a = 1/0;
         File f = new File("D://test.xls");
         try {
             Map<String,Object> list = ReadWriteExcel.readExcel(f,0);
@@ -54,6 +56,8 @@ public class TestController {
 
     @RequestMapping(value = "receiveExcel")
     public BaseRespDTO<Object> changeUserPhone(HttpServletRequest request, MultipartFile file) throws Exception {
+//        int a = 1/0;
+
         String filename = file.getOriginalFilename();
         String filesuff = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".") + 1);
 
