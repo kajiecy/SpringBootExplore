@@ -1,10 +1,7 @@
 package com.kajie88.bootexplore.controller;
 
-import com.kajie88.base.dao.TestDao;
 import com.kajie88.base.dto.req.BaseReqDTO;
 import com.kajie88.base.dto.resp.BaseRespDTO;
-import com.kajie88.base.enums.error.CommonError;
-import com.kajie88.base.exception.CommonException;
 import com.kajie88.bootexplore.learntest.LearnTest;
 import com.kajie88.util.excel.ReadWriteExcel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.util.List;
 import java.util.Map;
 
 /**
