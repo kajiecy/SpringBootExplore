@@ -1,4 +1,4 @@
-package com.kajie88.base.dao;/*
+package com.test;/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2014-2016 abel533@gmail.com

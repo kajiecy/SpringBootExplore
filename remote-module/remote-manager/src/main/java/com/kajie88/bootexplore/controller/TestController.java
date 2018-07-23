@@ -1,8 +1,11 @@
 package com.kajie88.bootexplore.controller;
 
+import com.kajie88.base.dao.UserMapper;
 import com.kajie88.base.dto.req.BaseReqDTO;
 import com.kajie88.base.dto.resp.BaseRespDTO;
 import com.kajie88.bootexplore.learntest.LearnTest;
+import com.kajie88.user.domain.UserDomain;
+import com.kajie88.user.service.UserService;
 import com.kajie88.util.excel.ReadWriteExcel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -27,13 +31,17 @@ public class TestController {
 
     @Autowired
     private LearnTest lt;
-
+    @Autowired
+    private UserService userService;
     @RequestMapping("showParam")
     public String testInter(){
-        TestDao testDao = new TestDao();
+        UserDomain userDomain = new UserDomain();
+        userDomain.getPageInfo().setPageNum(1);
+        userDomain.getPageInfo().setPageSize(5);
+        List<UserDomain> userList = userService.getUserList(userDomain);
 //        int number = 1/0;
 //        throw new CommonException(CommonError.SYSTEM_ERROR,"111");
-        return testDao.sayHello+"name:"+lt.getName()+";pwd:"+lt.getPwd();
+        return "name:"+lt.getName()+";pwd:"+lt.getPwd();
     }
     @RequestMapping("readExcel")
     public BaseRespDTO<Object> readExcel(@RequestBody BaseReqDTO<Map<String, String>> reqDTO){

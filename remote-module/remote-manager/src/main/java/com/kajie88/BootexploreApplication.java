@@ -4,8 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import tk.mybatis.spring.annotation.MapperScan;
 
-@SpringBootApplication(scanBasePackages={"com.kajie88"})
+@SpringBootApplication
+@MapperScan(basePackages = "com.kajie88.base.dao")
 public class BootexploreApplication extends SpringBootServletInitializer{
 	//for tomcat
 	@Override

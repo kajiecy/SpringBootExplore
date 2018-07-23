@@ -10,7 +10,8 @@
 		<module>base-module</module>
 		<module>service-module</module>
 		<module>util-module</module>
-	</modules>
+        <module>remote-module</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>bootexplore</name>

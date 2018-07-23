@@ -18,6 +18,7 @@
         <module>base-dto</module>
         <module>base-exception</module>
         <module>base-dao-generator</module>
+        <module>base-util</module>
     </modules>
 
 
