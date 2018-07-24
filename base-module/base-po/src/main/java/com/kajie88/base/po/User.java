@@ -6,7 +6,6 @@ import javax.persistence.*;
 @Table(name = "tbl_user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SELECT LAST_INSERT_ID()")
     private String id;
 
     private String name;

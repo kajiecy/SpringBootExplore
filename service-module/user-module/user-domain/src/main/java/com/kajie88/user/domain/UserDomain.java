@@ -1,6 +1,6 @@
 package com.kajie88.user.domain;
 
-import com.github.pagehelper.PageInfo;
+import com.kajie88.base.dto.PageInfo;
 import com.kajie88.base.po.User;
 
 public class UserDomain extends User {

@@ -2,10 +2,10 @@ package com.kajie88.base.dao;
 
 import com.kajie88.base.po.User;
 import com.kajie88.base.po.UserExample;
-import java.util.List;
-
 import com.test.MyMapper;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
 public interface UserMapper extends MyMapper<User> {
     int countByExample(UserExample example);
 

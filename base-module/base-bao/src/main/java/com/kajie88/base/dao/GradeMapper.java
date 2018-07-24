@@ -2,9 +2,8 @@ package com.kajie88.base.dao;
 
 import com.kajie88.base.po.Grade;
 import com.kajie88.base.po.GradeExample;
-import java.util.List;
-
 import com.test.MyMapper;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface GradeMapper extends MyMapper<Grade> {

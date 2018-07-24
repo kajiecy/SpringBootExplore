@@ -9,7 +9,7 @@
 		<property name="endingDelimiter" value="`"/>
 
 		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-			<property name="mappers" value="com.kajie88.base.dao.MyMapper"/>
+			<property name="mappers" value="com.test.MyMapper"/>
 		</plugin>
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -30,14 +30,8 @@
 
 
 		<table tableName="tbl_user" domainObjectName="User">
-			<generatedKey column="id" sqlStatement="Mysql"/>
 		</table>
 		<table tableName="tbl_grade" domainObjectName="Grade">
-			<generatedKey column="id" sqlStatement="Mysql"/>
 		</table>
-
-		<!--<table tableName="*" domainObjectName="User">-->
-			<!--<columnRenamingRule searchString="^tbl_" replaceString="" />-->
-		<!--</table>-->
 	</context>
 </generatorConfiguration>

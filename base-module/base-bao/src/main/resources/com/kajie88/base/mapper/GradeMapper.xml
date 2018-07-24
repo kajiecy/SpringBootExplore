@@ -17,7 +17,7 @@
         <if test="criteria.valid" >
           <trim prefix="(" suffix=")" prefixOverrides="and" >
             <foreach collection="criteria.criteria" item="criterion" >
-              <choose>
+              <choose >
                 <when test="criterion.noValue" >
                   and ${criterion.condition}
                 </when>
